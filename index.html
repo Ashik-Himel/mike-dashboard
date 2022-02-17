@@ -12,76 +12,192 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header Area -->
+  <!-- Header Section -->
   <header>
+    <a href="#" class="hamburger"><i class="fa-solid fa-bars"></i></a>
     <a href="#" class="nav-brand">Logo</a>
   </header>
-  <!-- Main Conitainer -->
+
+  <!-- Sidebar -->
+  <aside>
+    <div class="aside__profile">
+      <img src="images/asset 0.png" alt="Profile Image">
+      <div class="aside__profile__info">
+        <h4>Welcome, <span>Mike</span></h4>
+        <div class="aside__social-icon">
+          <i class="fa-solid fa-envelope"></i>
+          <i class="fa-solid fa-user"></i>
+          <i class="fa-solid fa-gear"></i>
+        </div>
+      </div>
+    </div>
+    <div class="nav-area">
+      <h2>Dashboard</h2>
+      <ul class="nav">
+        <li><a href="#" class="active"><i class="fa-solid fa-users"></i> Overview</a></li>
+        <li><a href="#"><i class="fa-solid fa-eye"></i> Views</a></li>
+        <li><a href="#"><i class="fa-solid fa-users"></i> Traffic</a></li>
+        <li><a href="#"><i class="fa-solid fa-circle-dot"></i> Geo</a></li>
+        <li><a href="#"><i class="fa-solid fa-gem"></i> Orders</a></li>
+        <li><a href="#"><i class="fa-solid fa-bell"></i> News</a></li>
+        <li><a href="#"><i class="fa-solid fa-building-columns"></i> General</a></li>
+        <li><a href="#"><i class="fa-solid fa-clock-rotate-left"></i> History</a></li>
+        <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Main Content  -->
   <main>
-    <div class="sidebar">
-      <div class="sidebar__profile">
-        <img src="images/asset 0.png" alt="Profile Image">
-        <div class="sidebar__profile__info">
-          <h4>Welcome, <span>Mike</span></h4>
-          <div class="sidebar__social-icon">
-            <a href="#"><i class="fa-solid fa-envelope"></i></a>
-            <a href="#"><i class="fa-solid fa-user"></i></a>
-            <a href="#"><i class="fa-solid fa-gear"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="sidebar__nav">
-        <h2>Dashboard</h2>
-        <nav class="nav__area">
-          <ul class="nav">
-            <li class="active"><a href="#"><i class="fa-solid fa-users"></i> Overview</a></li>
-            <li><a href="#"><i class="fa-solid fa-eye"></i> Views</a></li>
-            <li><a href="#"><i class="fa-solid fa-users"></i> Traffic</a></li>
-            <li><a href="#"><i class="fa-solid fa-globe"></i> Geo</a></li>
-            <li><a href="#"><i class="fa-regular fa-gem"></i> Orders</a></li>
-            <li><a href="#"><i class="fa-solid fa-bell"></i> News</a></li>
-            <li><a href="#"><i class="fa-solid fa-building-columns"></i> General</a></li>
-            <li><a href="#"><i class="fa-solid fa-clock-rotate-left"></i> History</a></li>
-            <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-    <div class="content">
-      <div class="content__dashboard">
-        <h2><i class="fa-solid fa-gauge-high"></i> My Dashboard</h2>
+    <!-- Dashboard Section -->
+    <section class="dashboard-section">
+      <h2 class="dashboard__tilte"><i class="fa-solid fa-gauge-high"></i> My Dashboard</h2>
+      <div class="dashboard__card-area">
         <div class="dashboard__card">
-          <div class="dashboard__card__item">
-            <div>
-              <i class="fa-solid fa-comment"></i>
-              <span>Massages</span>
-            </div>
-            <span>52</span>
+          <div>
+            <i class="fa-solid fa-comment"></i>
+            <span>Massages</span>
           </div>
-          <div class="dashboard__card__item">
-            <div>
-              <i class="fa-solid fa-comment"></i>
-              <span>Massages</span>
-            </div>
-            <span>52</span>
+          <span>52</span>
+        </div>
+        <div class="dashboard__card">
+          <div>
+            <i class="fa-solid fa-eye"></i>
+            <span>Views</span>
           </div>
-          <div class="dashboard__card__item">
-            <div>
-              <i class="fa-solid fa-comment"></i>
-              <span>Massages</span>
-            </div>
-            <span>52</span>
+          <span>99</span>
+        </div>
+        <div class="dashboard__card">
+          <div>
+            <i class="fa-solid fa-share-nodes"></i>
+            <span>Shares</span>
           </div>
-          <div class="dashboard__card__item">
-            <div>
-              <i class="fa-solid fa-comment"></i>
-              <span>Massages</span>
-            </div>
-            <span>52</span>
+          <span>23</span>
+        </div>
+        <div class="dashboard__card">
+          <div>
+            <i class="fa-solid fa-users"></i>
+            <span>Users</span>
           </div>
+          <span>50</span>
         </div>
       </div>
-    </div>
+    </section>
+    <!-- Feeds Section -->
+    <section class="feeds-section">
+      <div class="regions">
+        <h2>Regions</h2>
+        <img src="images/asset 1.jpeg" alt="Map Image">
+      </div>
+      <div class="feeds">
+        <h2>Feeds</h2>
+        <table>
+          <tr>
+            <td><i class="fa-solid fa-user"></i></td>
+            <td>New record, over 90 views.</td>
+            <td>10 mins</td>
+          </tr>
+          <tr>
+            <td><i class="fa-solid fa-bell"></i></td>
+            <td>Database error.</td>
+            <td>15 mins</td>
+          </tr>
+          <tr>
+            <td><i class="fa-solid fa-users"></i></td>
+            <td>New record, over 40 users.</td>
+            <td>17 mins</td>
+          </tr>
+          <tr>
+            <td><i class="fa-solid fa-comment"></i></td>
+            <td>New comments.</td>
+            <td>25 mins</td>
+          </tr>
+          <tr>
+            <td><i class="fa-solid fa-ribbon"></i></td>
+            <td>Check transactions.</td>
+            <td>28 mins</td>
+          </tr>
+          <tr>
+            <td><i class="fa-solid fa-laptop"></i></td>
+            <td>CPU overload.</td>
+            <td>35 mins</td>
+          </tr>
+          <tr>
+            <td><i class="fa-solid fa-share-nodes"></i></td>
+            <td>New shares.</td>
+            <td>39 mins</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <h2>General Stats</h2>
+      <div class="progress-section">
+        <span>New Visitors</span>
+        <div class="progress-bar">
+          <div class="progress"><span>25%</span></div>
+        </div>
+      </div>
+      <div class="progress-section">
+        <span>New Users</span>
+        <div class="progress-bar">
+          <div class="progress"><span>50%</span></div>
+        </div>
+      </div>
+      <div class="progress-section">
+        <span>Bounce Rate</span>
+        <div class="progress-bar">
+          <div class="progress"><span>75%</span></div>
+        </div>
+      </div>
+    </section>
+    <!-- Contries Section -->
+    <section class="countries-section">
+      <h2>Countries</h2>
+      <table>
+        <tr>
+          <td>United States</td>
+          <td>65%</td>
+        </tr>
+        <tr>
+          <td>UK</td>
+          <td>15.7%</td>
+        </tr>
+        <tr>
+          <td>Russia</td>
+          <td>5.6%</td>
+        </tr>
+        <tr>
+          <td>Spain</td>
+          <td>2.1%</td>
+        </tr>
+        <tr>
+          <td>India</td>
+          <td>1.9%</td>
+        </tr>
+        <tr>
+          <td>France</td>
+          <td>1.5%</td>
+        </tr>
+      </table>
+      <a href="#" class="btn">More Countries <i class="fa-solid fa-arrow-right"></i></a>
+    </section>
+    <!-- Users Section -->
+    <section class="users-section">
+      <h2>Recent Users</h2>
+      <table>
+        <tr>
+          <td><img src="images/asset 0.png" alt="User Image"><span>Mike</span></td>
+        </tr>
+        <tr>
+          <td><img src="images/asset 2.png" alt="User Image"><span>Jill</span></td>
+        </tr>
+        <tr>
+          <td><img src="images/asset 3.png" alt="User Image"><span>Jane</span></td>
+        </tr>
+      </table>
+    </section>
   </main>
 
   <script src="script.js"></script>
