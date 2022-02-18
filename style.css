@@ -1,3 +1,7 @@
+@keyframes slide-right {
+  from {left: -100%}
+  to {left: 0}
+}
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 :root {
   --skyblue-color: #2196f3;
@@ -9,6 +13,7 @@
   --white-color: #fff;
   --gray-color: #9e9e9e;
   --light-gray-color: #f1f1f1;
+  --deep-gray-color: #616161;
 }
 * {
   box-sizing: border-box;
@@ -48,11 +53,13 @@ header {
   align-items: center;
   position: sticky;
   top: 0;
-  z-index: 1;
 }
 header .hamburger {
   color: var(--white-color);
   visibility: hidden;
+}
+header .hamburger i {
+  margin-right: 0.5rem;
 }
 header .nav-brand {
   color: white;
@@ -63,10 +70,9 @@ header .nav-brand {
 aside {
   background-color: var(--white-color);
   width: 300px;
-  padding: 1.5rem;
   position: fixed;
   top: 45px;
-  left: 0;
+  animation: slide-right 0.5s ease;
   bottom: 0;
   overflow: auto;
   box-shadow: 2px 0px 15px rgba(0,0,0,0.2);
@@ -75,6 +81,7 @@ aside {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 1rem;
   margin-bottom: 2.5rem;
 }
 .aside__profile img {
@@ -95,12 +102,15 @@ aside {
   display: flex;
   gap: 1rem;
 }
+.nav-area h2 {
+  margin-left: 2rem;
+}
 .nav {
   margin-top: 1rem;
 }
 .nav a {
   display: block;
-  padding: 0.6rem;
+  padding: 0.6rem 2rem;
 }
 .nav a:hover {
   background-color: var(--gray-color);
@@ -117,7 +127,17 @@ aside {
 main {
   background-color: var(--light-gray-color);
   margin-left: 300px;
+}
+main > * {
   padding: 1.5rem;
+}
+main > section {
+  padding-top: 2rem;
+}
+
+/* Dashboard */
+.dashboard-section {
+  padding-top: 3rem;
 }
 .dashboard__card-area {
   margin-top: 1rem;
@@ -161,7 +181,6 @@ main {
 
 /* Feeds Section */
 .feeds-section {
-  margin-top: 4rem;
   display: flex;
   gap: 1rem;
 }
@@ -207,9 +226,6 @@ main {
 }
 
 /* Stats Section */
-.stats-section {
-  margin-top: 4rem;
-}
 .stats-section > h2 {
   margin-bottom: 1rem;
 }
@@ -246,9 +262,6 @@ main {
 }
 
 /* Countries Section */
-.countries-section {
-  margin-top: 4rem;
-}
 .countries-section > h2 {
   margin-bottom: 1rem;
 }
@@ -280,9 +293,6 @@ main {
 }
 
 /* Users Section */
-.users-section {
-  margin-top: 4rem;
-}
 .users-section h2 {
   margin-bottom: 1rem;
 }
@@ -309,4 +319,121 @@ main {
 }
 .users-section table span {
   font-size: 1.5rem;
+}
+
+/* Recent Comments */
+.comments-section > h2 {
+  margin-bottom: 1rem;
+}
+.comment {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 1rem;
+}
+.comment img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.comment-info h2 {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.comment-info p {
+  margin-top: 0.5rem;
+}
+.comment-info time {
+  color: var(--gray-color);
+}
+
+/* Main Footer */
+.main-footer {
+  background-color: var(--deep-gray-color);
+  color: #fff;
+  margin-top: 4rem;
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.main-footer > div {
+  flex: 1;
+}
+.main-footer div h2 {
+  margin-right: 3rem;
+  border-bottom: 4px solid var(--blue-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+.main-footer div p {
+  line-height: 2rem;
+}
+.main-footer div:nth-child(2) h2 {
+  border-color: var(--red-color);
+}
+.main-footer div:nth-child(3) h2 {
+  border-color: var(--orange-color);
+}
+
+/* Bottom Footer */
+.bottom-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: var(--gray-color);
+}
+.bottom-footer a {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+  header .hamburger {
+    visibility: visible;
+  }
+  aside {
+    animation: none;
+    left: -350px;
+    transition: left 0.5s ease;
+  }
+  aside.active {
+    left: 0;
+  }
+  main {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dashboard__card-area {
+    flex-wrap: wrap;
+  }
+  .dashboard__card {
+    flex-basis: 45%;
+  }
+  .feeds-section {
+    flex-direction: column;
+  }
+  .feeds-section img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .dashboard__card {
+    flex-basis: 100%;
+  }
+  .comment {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .main-footer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .bottom-footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
